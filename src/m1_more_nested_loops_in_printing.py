@@ -173,7 +173,7 @@ def vee(r):
     For purposes of "lining up", assume r is a single digit.
     """
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -346,7 +346,7 @@ def numbers_increasing_forward(r, maxnum):
     Preconditions:  r and maxnum are positive integers.
     """
     # -------------------------------------------------------------------------
-    # TODO: 7. Implement and test this function.
+    # DONE: 7. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     # IMPLEMENTATION RESTRICTION:
@@ -354,7 +354,15 @@ def numbers_increasing_forward(r, maxnum):
     #   in this or the other problems in this module, as doing so would
     #   defeat the goal of providing practice at loops within loops.
     # -------------------------------------------------------------------------
-
+    for k in range(r):
+        for j in range(maxnum):
+            for l in range(j + 1):
+                if (j is maxnum - 1) and (l is j):
+                    print(j + 1)
+                else:
+                    print(j + 1, end='')
+            if j is not maxnum - 1:
+                print(' ', end='')
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
